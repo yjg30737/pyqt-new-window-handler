@@ -14,4 +14,6 @@ Currently, this package is forced to be used ```pyqt-custom-titlebar-window``` a
 * <a href="https://github.com/yjg30737/pyqt-style-setter.git">pyqt-style-setter</a>
 * <a href="https://github.com/yjg30737/pyqt-custom-titlebar-setter.git">pyqt-custom-titlebar-setter</a>
 * <a href="https://github.com/yjg30737/pyqt-custom-titlebar-window.git">pyqt-custom-titlebar-window</a>
-    
+
+## Example
+* Look at the source of <a href="https://github.com/yjg30737/pyqt-dark-notepad/blob/main/pyqt_dark_notepad/darkNotepadApp.py">darkNotepadApp.py</a> of pyqt-dark-notepad package.
