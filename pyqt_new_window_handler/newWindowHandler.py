@@ -12,13 +12,14 @@ class NewWindowHandler(QObject):
         qApp.installEventFilter(self)
         self.__windowDict = dict()
         self.__newWidgetType = new_widget_type
+        self.__exclude_type_lst = []
         self.__icon_filename = icon_filename
-        self.__new(exclude_type_lst)
+        self.__new()
 
-    def __new(self, exclude_type_lst: list):
+    def __new(self):
         mainWindow = self.__newWidgetType()
         mainWindow.newClicked.connect(self.__new)
-        StyleSetter.setWindowStyle(mainWindow, exclude_type_lst=exclude_type_lst)
+        StyleSetter.setWindowStyle(mainWindow, exclude_type_lst=self.__exclude_type_lst)
         titleBarWindow = CustomTitlebarSetter.getCustomTitleBar(mainWindow, icon_filename=self.__icon_filename)
         titleBarWindow.setAttribute(Qt.WA_DeleteOnClose)
         titleBarWindow.destroyed.connect(self.__destroyed)
