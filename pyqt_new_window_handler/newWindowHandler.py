@@ -12,7 +12,7 @@ class NewWindowHandler(QObject):
         qApp.installEventFilter(self)
         self.__windowDict = dict()
         self.__newWidgetType = new_widget_type
-        self.__exclude_type_lst = []
+        self.__exclude_type_lst = exclude_type_lst
         self.__icon_filename = icon_filename
         self.__new()
 
