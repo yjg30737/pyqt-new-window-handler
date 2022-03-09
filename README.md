@@ -2,7 +2,7 @@
 PyQt QObject type class which operates/handles "New Window" feature
 
 ## Note
-Currently, this package is forced to be used ```pyqt-custom-titlebar-window``` and ```pyqt-style-setter```(There are links of those packages below).
+Currently, this package is forced to be used ```pyqt-custom-titlebar-setter```.
 
 ## Requirements
 * PyQt5 >= 5.15
