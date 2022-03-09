@@ -1,25 +1,22 @@
 from PyQt5.QtCore import QObject, Qt
 from PyQt5.QtWidgets import qApp
 
-from pyqt_style_setter import StyleSetter
 from pyqt_custom_titlebar_setter import CustomTitlebarSetter
 from pyqt_custom_titlebar_window import CustomTitlebarWindow
 
 
 class NewWindowHandler(QObject):
-    def __init__(self, new_widget_type, icon_filename: str, exclude_type_lst: list = [], *args, **kwargs):
+    def __init__(self, new_widget_type, icon_filename: str, *args, **kwargs):
         super().__init__(*args, **kwargs)
         qApp.installEventFilter(self)
         self.__windowDict = dict()
         self.__newWidgetType = new_widget_type
-        self.__exclude_type_lst = exclude_type_lst
         self.__icon_filename = icon_filename
         self.__new()
 
     def __new(self):
         mainWindow = self.__newWidgetType()
         mainWindow.newClicked.connect(self.__new)
-        StyleSetter.setWindowStyle(mainWindow, exclude_type_lst=self.__exclude_type_lst)
         titleBarWindow = CustomTitlebarSetter.getCustomTitleBar(mainWindow, icon_filename=self.__icon_filename)
         titleBarWindow.setAttribute(Qt.WA_DeleteOnClose)
         titleBarWindow.destroyed.connect(self.__destroyed)
