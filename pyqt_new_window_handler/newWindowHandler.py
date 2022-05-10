@@ -17,7 +17,7 @@ class NewWindowHandler(QObject):
     def __new(self):
         mainWindow = self.__newWidgetType()
         mainWindow.newClicked.connect(self.__new)
-        titleBarWindow = CustomTitlebarSetter.getCustomTitleBarSetter(mainWindow, icon_filename=self.__icon_filename)
+        titleBarWindow = CustomTitlebarSetter.getCustomTitleBarWindow(mainWindow, icon_filename=self.__icon_filename)
         titleBarWindow.setAttribute(Qt.WA_DeleteOnClose)
         titleBarWindow.destroyed.connect(self.__destroyed)
         titleBarWindow.show()
