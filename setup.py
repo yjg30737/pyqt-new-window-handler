@@ -11,7 +11,7 @@ setup(
     url='https://github.com/yjg30737/pyqt-new-window-handler.git',
     install_requires=[
         'PyQt5>=5.15',
-        'pyqt-custom-titlebar-setter @ git+https://git@github.com/yjg30737/pyqt-custom-titlebar-setter.git@main',
-        'pyqt-custom-titlebar-window @ git+https://git@github.com/yjg30737/pyqt-custom-titlebar-window.git@main'
+        'pyqt-custom-titlebar-setter>=0.0.1',
+        'pyqt-custom-titlebar-window>=0.0.1'
     ]
 )
