@@ -8,7 +8,7 @@ Currently, this package is forced to be used ```pyqt-custom-titlebar-setter```.
 * PyQt5 >= 5.15
 
 ## Setup
-```pip3 install git+https://github.com/yjg30737/pyqt-new-window-handler.git --upgrade```
+`python -m pip install pyqt-new-window-handler`
 
 ## Included Packages
 * <a href="https://github.com/yjg30737/pyqt-custom-titlebar-setter.git">pyqt-custom-titlebar-setter</a>
