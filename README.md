@@ -1,9 +1,6 @@
 # pyqt-new-window-handler
 PyQt QObject type class which operates/handles "New Window" feature
 
-## Note
-Currently, this package is forced to be used ```pyqt-custom-titlebar-setter```.
-
 ## Requirements
 * PyQt5 >= 5.15
 
