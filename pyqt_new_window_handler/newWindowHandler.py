@@ -2,7 +2,7 @@ from PyQt5.QtCore import QObject, Qt
 from PyQt5.QtWidgets import qApp
 
 from pyqt_custom_titlebar_setter import CustomTitlebarSetter
-from pyqt_custom_titlebar_window import CustomTitlebarWindow
+from pyqt_custom_titlebar_window.customTitlebarWindow import CustomTitlebarWindow
 
 
 class NewWindowHandler(QObject):
